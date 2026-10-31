@@ -32,5 +32,5 @@ Paper thumbnails are sourced from their respective papers. The OmniNavBench thum
 
 - Peking University: official seal from https://www.pku.edu.cn/pku_logo_red.png
 - BUPT: official identity header from https://vi.bupt.edu.cn/images/logo1.png; the seal is displayed using CSS framing, preserving the original asset.
-- AutoLab: official organization avatar from https://github.com/AutoLab-SAI-SJTU (https://avatars.githubusercontent.com/u/219082940?v=4).
+- AutoLab: official organization avatar from https://github.com/AutoLab-SAI-SJTU (https://avatars.githubusercontent.com/u/219082940?v=4), edited to remove the black background and saved as `autolab-logo-transparent.png`.
 - VCL Lab: the logo from the user-selected reference https://chang-xinhai.github.io/images/experience/webp/VCL.webp.
