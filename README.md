@@ -25,4 +25,4 @@ Website: https://silence-ai423.github.io/
 - Drive3R: https://arxiv.org/abs/2610.15112
 - OpenDepth: https://arxiv.org/abs/2610.17610
 
-Paper thumbnails are sourced from their respective papers. The OmniNavBench graphic is a conceptual illustration, not an experimental result. Layout references: https://jonbarron.info/ and https://ericaire.github.io/.
+Paper thumbnails are sourced from their respective papers. The OmniNavBench thumbnail uses the teaser (Figure 1) extracted from https://arxiv.org/pdf/2605.09441. Layout references: https://jonbarron.info/ and https://ericaire.github.io/.
