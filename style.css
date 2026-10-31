@@ -161,7 +161,8 @@ pre{overflow:auto;background:#f6f6f6;padding:14px;font-size:12px;white-space:pre
 /* Institution marks alongside education and research entries. */
 .org-logo-cell{width:108px;padding:12px 16px;vertical-align:middle}
 .org-logo{display:block;width:76px;height:76px;object-fit:contain}
-.org-logo.bupt-seal{object-fit:contain}
+/* Match the visible seal diameter: the BUPT source has 30 px of inset. */
+.org-logo.bupt-seal{object-fit:contain;transform:scale(1.114286) translateX(-.52%);transform-origin:center}
 @media(max-width:540px){.org-logo-cell{width:68px;padding:12px 8px}.org-logo{width:52px;height:52px}.background-table .entry-copy{padding:12px 8px!important}.background-table .entry-date{padding:12px 8px!important;white-space:normal!important;width:95px}}
 
 /* Keep the illustrated portrait visible above the introduction on phones. */
