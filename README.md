@@ -37,3 +37,9 @@ Paper thumbnails are sourced from their respective papers. The OmniNavBench thum
 
 - DepthCore: owl logo supplied by Tianyi Yang, used unchanged as `depthcore-logo.png`.
 - DiDi Voyager: orange symbol extracted from the official DiDi vector identity, https://website.didiglobal.com/dist/media/logo-en.cdc5b041.svg; original symbol geometry and colors retained in `didi-logo.svg`.
+
+## Publication resources
+
+- OmniNavBench project and leaderboard: https://huggingface.co/spaces/Sun-Season/omni-nav-bench (live app: https://sun-season-omni-nav-bench.static.hf.space/index.html); dataset: https://huggingface.co/datasets/AutoLab-SJTU/OmniNavBench.
+- Drive3R code: https://github.com/AutoLab-SAI-SJTU/Drive3R; model weights: https://huggingface.co/Young857/Drive3R.
+- OpenDepth code: https://github.com/zmkshakespar/OpenDepth. Its project-page link is intentionally omitted at the author's request.
