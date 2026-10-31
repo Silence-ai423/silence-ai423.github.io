@@ -1,6 +1,6 @@
 # Tianyi Yang · Academic Homepage
 
-A bilingual academic homepage for GitHub Pages, inspired by Jon Barron and Suzhe Xu.
+A bilingual academic homepage for GitHub Pages, based directly on the open-source template by Jon Barron: https://github.com/jonbarron/jonbarron_website. The original 800px table layout, Lato typography, publication rows, and highlight color are retained. No analytics scripts from the original website are included.
 
 ## Edit your page
 
