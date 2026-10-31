@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="6 8 148 148" fill="none">
+  <title>DepthCore owl</title>
+  <path d="M12 14 47 38C62 36 75 44 80 58 85 44 98 36 113 38L148 14V108C148 136 126 150 80 150S12 136 12 108Z" stroke="#171717" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#171717">
+    <circle cx="47" cy="76" r="25"/>
+    <circle cx="113" cy="76" r="25"/>
+    <path d="m71 99 18 0-9 17Z"/>
+  </g>
+  <g fill="#fff">
+    <circle cx="47" cy="76" r="17"/>
+    <circle cx="113" cy="76" r="17"/>
+  </g>
+  <g fill="#171717">
+    <circle cx="47" cy="76" r="12"/>
+    <circle cx="113" cy="76" r="12"/>
+  </g>
+</svg>
