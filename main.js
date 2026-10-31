@@ -40,3 +40,49 @@ document.querySelectorAll('[data-bib]').forEach(b=>b.addEventListener('click',()
 document.getElementById('close-dialog').addEventListener('click',()=>dialog.close());
 dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close()}});
 document.getElementById('copy-citation').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(citationText.textContent);status.textContent=language==='zh'?'已复制':'Copied'}catch{const s=window.getSelection();s.removeAllRanges();const r=document.createRange();r.selectNodeContents(citationText);s.addRange(r);status.textContent=language==='zh'?'请复制已选中的文本':'Please copy the selected text'}});
+
+// Public repository metadata only; retain the last count if GitHub is unavailable.
+const starCacheTtl=15*60*1000;
+const starRequests=new Set();
+const starLastAttempt=new Map();
+function validStarCount(value){return Number.isSafeInteger(value)&&value>=0}
+async function refreshGithubStars(link){
+  const repo=link.dataset.githubRepo;
+  const badge=link.querySelector('.github-stars');
+  if(!badge||!/^[-\w.]+\/[-\w.]+$/.test(repo))return;
+  const render=(count,updatedAt)=>{
+    badge.textContent='★ '+new Intl.NumberFormat('en-US').format(count);
+    badge.setAttribute('aria-label',count+' GitHub stars');
+    badge.title='GitHub stars · Updated '+new Date(updatedAt).toLocaleString();
+  };
+  render(Number(badge.dataset.count),Number(badge.dataset.updatedAt));
+  const key='github-stars:v1:'+repo;
+  try{
+    const cached=JSON.parse(localStorage.getItem(key));
+    if(cached&&validStarCount(cached.count)&&Number.isFinite(cached.updatedAt)&&cached.updatedAt>0&&cached.updatedAt<=Date.now()){
+      render(cached.count,cached.updatedAt);
+      if(Date.now()-cached.updatedAt<starCacheTtl)return;
+    }
+  }catch{}
+  if(starRequests.has(repo)||Date.now()-(starLastAttempt.get(repo)||0)<60000)return;
+  starRequests.add(repo);starLastAttempt.set(repo,Date.now());
+  const controller=new AbortController();
+  const timeout=setTimeout(()=>controller.abort(),6000);
+  try{
+    const response=await fetch('https://api.github.com/repos/'+repo,{headers:{Accept:'application/vnd.github+json'},signal:controller.signal,credentials:'omit'});
+    if(!response.ok)return;
+    const data=await response.json();
+    if(!validStarCount(data.stargazers_count))return;
+    const updatedAt=Date.now();
+    badge.dataset.count=String(data.stargazers_count);badge.dataset.updatedAt=String(updatedAt);
+    render(data.stargazers_count,updatedAt);
+    try{localStorage.setItem(key,JSON.stringify({count:data.stargazers_count,updatedAt}))}catch{}
+  }catch{}finally{clearTimeout(timeout);starRequests.delete(repo)}
+}
+function refreshVisibleStarCounts(){
+  if(document.visibilityState!=='visible')return;
+  document.querySelectorAll('[data-github-repo]').forEach(link=>{void refreshGithubStars(link)});
+}
+refreshVisibleStarCounts();
+setInterval(refreshVisibleStarCounts,starCacheTtl);
+document.addEventListener('visibilitychange',refreshVisibleStarCounts);

@@ -166,3 +166,6 @@ pre{overflow:auto;background:#f6f6f6;padding:14px;font-size:12px;white-space:pre
 
 /* Keep the illustrated portrait visible above the introduction on phones. */
 @media(max-width:540px){.intro>tbody>tr{display:flex;flex-direction:column-reverse;align-items:center}.intro-copy{display:block;box-sizing:border-box;width:100%!important}.intro .photo-cell{display:block;box-sizing:border-box;width:180px!important;max-width:60%!important;padding:16px 8px 0!important}.intro .portrait{max-width:164px}}
+
+/* Keep repository stars compact beside each code link. */
+.code-link{white-space:nowrap}.github-stars{font-size:12px;color:#666}

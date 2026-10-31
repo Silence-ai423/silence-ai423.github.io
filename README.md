@@ -51,3 +51,7 @@ Paper thumbnails are sourced from their respective papers. The OmniNavBench thum
 The current avatar is `portrait-color-v2.png`, revised with the built-in image generation tool at Tianyi Yang's request: preserve the original face proportions and natural expression with less beautification, use the earlier colored drawing style, and keep the foreground thumbs-up deliberately blurred like the reference photograph. `portrait-sketch.png` is the previous unused variant.
 
 The active portrait is now `portrait-selected.png`, the colored illustration explicitly selected and supplied by Tianyi Yang, copied unchanged. The earlier portrait files are unused variants.
+
+## GitHub star counts
+
+Each publication code link shows its repository star count. The browser refreshes counts from GitHub's public repository API, caches successful responses for 15 minutes, and refreshes while the page is visible or when returning to it. No token is used. On network errors or API rate limits, the last available count stays visible and code links remain usable. The hover text records the successful update time.
