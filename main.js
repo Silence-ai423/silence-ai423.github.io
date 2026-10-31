@@ -7,7 +7,7 @@ document.getElementById('name').textContent=profile.name+(profile.chineseName?' 
 
 const links=document.getElementById('profile-links');links.replaceChildren();
 for(const [label,url] of [['Email',profile.email?'mailto:'+profile.email:''],['GitHub',profile.github],['Scholar',profile.scholar],['CV',profile.cv]]){if(!url)continue;const a=document.createElement('a');a.textContent=label;a.href=url;if(!url.startsWith('mailto:')){a.target='_blank';a.rel='noopener noreferrer'}if(links.childNodes.length)links.append(document.createTextNode(' \u00a0/\u00a0 '));links.append(a)}
-if(profile.portrait){const p=document.getElementById('portrait');p.replaceChildren();const i=document.createElement('img');i.src=profile.portrait;i.alt=profile.name;p.append(i)}
+if(profile.portrait){const p=document.getElementById('portrait');const i=p.querySelector('img')||document.createElement('img');i.src=profile.portrait;i.alt=profile.name;i.width=256;i.height=256;i.decoding='async';if(!i.parentNode)p.append(i)}
 function setLanguage(lang){language=lang;document.getElementById('bio').innerHTML=profile.bio[lang];document.documentElement.lang=lang==='zh'?'zh-CN':'en';document.querySelectorAll('[data-en]').forEach(el=>el.textContent=el.dataset[lang]);for(const key of ['role','interests']){const el=document.getElementById(key);if(el)el.textContent=profile[key][lang]};document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===lang)));try{localStorage.setItem('homepage-language',lang)}catch{}}
 document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>setLanguage(b.dataset.lang)));setLanguage(language);
 const citations={
