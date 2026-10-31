@@ -11,6 +11,14 @@ if(profile.portrait){const p=document.getElementById('portrait');p.replaceChildr
 function setLanguage(lang){language=lang;document.documentElement.lang=lang==='zh'?'zh-CN':'en';document.querySelectorAll('[data-en]').forEach(el=>el.textContent=el.dataset[lang]);for(const key of ['role','bio','interests']){const el=document.getElementById(key);if(el)el.textContent=profile[key][lang]};document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===lang)));try{localStorage.setItem('homepage-language',lang)}catch{}}
 document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>setLanguage(b.dataset.lang)));setLanguage(language);
 const citations={
+omninavbench:`@inproceedings{sun2026omninavbench,
+  title = {Beyond Isolation: A Unified Benchmark for General-Purpose Navigation},
+  author = {Sun, Samson and Yang, Tianyi and Wang, Tengyue and Xue, Yikai and Xu, Zhengjie and Zhang, Lingming and Zhang, Qichen and Liang, Chao and Zhang, Zhipeng},
+  booktitle = {Robotics: Science and Systems},
+  year = {2026},
+  url = {https://www.roboticsproceedings.org/rss22/p132.html}
+}`,
+
 opendepth:`@article{zhang2026opendepth,
   title = {OpenDepth: Repurposing Image Editing Priors for Robust Open-World Monocular Depth Estimation},
   author = {Zhang, Mengke and Yang, Tianyi and Li, Xinzhuo and Ming, Anlong},
