@@ -1,2 +1,28 @@
-# silence-ai423.github.io
-Tianyi Yang — personal academic homepage
+# Tianyi Yang · Academic Homepage
+
+A bilingual academic homepage for GitHub Pages, inspired by Jon Barron and Suzhe Xu.
+
+## Edit your page
+
+- `profile.js`: name, biography, research interests, email, GitHub, Scholar, CV, and photo.
+- `index.html`: papers, authors, venues, and publication links.
+- `style.css`: responsive layout and visual style.
+- `main.js`: language switching and BibTeX display.
+
+To add a portrait, upload a photo and set `portrait` in `profile.js` to its filename.
+
+## Publish
+
+Repository: `Silence-ai423/silence-ai423.github.io`
+
+In **Settings → Pages**, choose **Deploy from a branch → main → / (root)** and save.
+
+Website: https://silence-ai423.github.io/
+
+## Sources and credits
+
+- OmniNavBench: https://github.com/AutoLab-SAI-SJTU/OmniNavBench
+- Drive3R: https://arxiv.org/abs/2610.15112
+- OpenDepth: https://arxiv.org/abs/2610.17610
+
+Paper thumbnails are sourced from their respective papers. The OmniNavBench graphic is a conceptual illustration, not an experimental result. Layout references: https://jonbarron.info/ and https://ericaire.github.io/.
