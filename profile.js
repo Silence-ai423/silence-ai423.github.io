@@ -7,7 +7,7 @@ window.PROFILE = {
   github: 'https://github.com/Silence-ai423',
   scholar: '',
   cv: '',
-  portrait: 'portrait-sketch.png',
+  portrait: 'portrait-color-v2.png',
   role: { en: "Incoming Master's Student", zh: '即将开始硕士阶段的学习' },
   bio: {
     "en": "<p>I am a final-year undergraduate in Internet of Things Engineering at the International School, <a href=\"https://www.bupt.edu.cn/\" target=\"_blank\" rel=\"noopener noreferrer\">Beijing University of Posts and Telecommunications</a>, expecting to graduate in 2027. I will join the Wangxuan Institute of Computer Technology, <a href=\"https://www.pku.edu.cn/\" target=\"_blank\" rel=\"noopener noreferrer\">Peking University</a>, as a master's student in 2027, advised by <a href=\"https://wenzhengchen.github.io/\" target=\"_blank\" rel=\"noopener noreferrer\">Prof. Wenzheng Chen</a>. I currently conduct research at VCL Lab and previously worked with <a href=\"https://zhipengzhang.cn/\" target=\"_blank\" rel=\"noopener noreferrer\">Prof. Zhipeng Zhang</a> at AutoLab. My industry experience includes DiDi Voyager and DepthCore.</p><p>My research interests lie in <strong>3D vision and embodied intelligence</strong>. I am currently interested in two directions: (1) <strong>coding agents for embodied tasks and 3D environments</strong>; and (2) <strong>3D perception for embodied intelligence</strong>.</p>",
