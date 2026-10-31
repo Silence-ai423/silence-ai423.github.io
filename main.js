@@ -1,7 +1,5 @@
 const profile=window.PROFILE;
 let language='en';
-try{language=localStorage.getItem('homepage-language')||'en'}catch{}
-if(!['en','zh'].includes(language))language='en';
 document.title=profile.name;
 document.getElementById('name').textContent=profile.name+(profile.chineseName?' / '+profile.chineseName:'');
 
@@ -15,7 +13,7 @@ if(profile.portrait){
   Object.assign(i.style,{display:'block',width:'100%',maxWidth:'256px',height:'auto',maxHeight:'256px',objectFit:'contain',borderRadius:'50%'});
   if(!i.parentNode)p.append(i);
 }
-function setLanguage(lang){language=lang;document.getElementById('bio').innerHTML=profile.bio[lang];document.documentElement.lang=lang==='zh'?'zh-CN':'en';document.querySelectorAll('[data-en]').forEach(el=>el.textContent=el.dataset[lang]);for(const key of ['role','interests']){const el=document.getElementById(key);if(el)el.textContent=profile[key][lang]};document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===lang)));try{localStorage.setItem('homepage-language',lang)}catch{}}
+function setLanguage(lang){language=lang;document.getElementById('bio').innerHTML=profile.bio[lang];document.documentElement.lang=lang==='zh'?'zh-CN':'en';document.querySelectorAll('[data-en]').forEach(el=>el.textContent=el.dataset[lang]);for(const key of ['role','interests']){const el=document.getElementById(key);if(el)el.textContent=profile[key][lang]};document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===lang)))}
 document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>setLanguage(b.dataset.lang)));setLanguage(language);
 const citations={
 omninavbench:`@inproceedings{sun2026omninavbench,

@@ -163,6 +163,11 @@ pre{overflow:auto;background:#f6f6f6;padding:14px;font-size:12px;white-space:pre
 .org-logo{display:block;width:76px;height:76px;object-fit:contain}
 /* Match the visible seal diameter: the BUPT source has 30 px of inset. */
 .org-logo.bupt-seal{object-fit:contain;transform:scale(1.114286) translateX(-.52%);transform-origin:center}
+/* Balance solid squares, airy symbols, and wide marks by visible weight. */
+.org-logo.vcl-mark{transform:scale(.9)}
+.org-logo.autolab-mark{transform:scale(1.03)}
+.org-logo.depthcore-mark{transform:scale(1.06)}
+.org-logo.didi-mark{transform:scale(1.05);transform-origin:47.6% 51.2%}
 @media(max-width:540px){.org-logo-cell{width:68px;padding:12px 8px}.org-logo{width:52px;height:52px}.background-table .entry-copy{padding:12px 8px!important}.background-table .entry-date{padding:12px 8px!important;white-space:normal!important;width:95px}}
 
 /* Keep the illustrated portrait visible above the introduction on phones. */
