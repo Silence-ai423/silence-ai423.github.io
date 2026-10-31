@@ -43,3 +43,7 @@ Paper thumbnails are sourced from their respective papers. The OmniNavBench thum
 - OmniNavBench project and leaderboard: https://huggingface.co/spaces/Sun-Season/omni-nav-bench (live app: https://sun-season-omni-nav-bench.static.hf.space/index.html); dataset: https://huggingface.co/datasets/AutoLab-SJTU/OmniNavBench.
 - Drive3R code: https://github.com/AutoLab-SAI-SJTU/Drive3R; model weights: https://huggingface.co/Young857/Drive3R.
 - OpenDepth code: https://github.com/zmkshakespar/OpenDepth. Its project-page link is intentionally omitted at the author's request.
+
+## Profile illustration
+
+`portrait-sketch.png` was created with the built-in image generation tool from a photograph supplied by Tianyi Yang. Final prompt: simplify the portrait into minimal black line art on white, keeping the glasses, tousled hair, red T-shirt, three-quarter pose, slight smile and thumbs-up; use black hair and flat red clothing, sparse facial and hand contours, no dormitory background, text or watermark, with a square composition suitable for circular cropping. The original photograph is not included in this repository.

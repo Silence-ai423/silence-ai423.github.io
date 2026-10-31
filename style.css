@@ -163,3 +163,6 @@ pre{overflow:auto;background:#f6f6f6;padding:14px;font-size:12px;white-space:pre
 .org-logo{display:block;width:76px;height:76px;object-fit:contain}
 .org-logo.bupt-seal{object-fit:cover;object-position:left center}
 @media(max-width:540px){.org-logo-cell{width:68px;padding:12px 8px}.org-logo{width:52px;height:52px}.background-table .entry-copy{padding:12px 8px!important}.background-table .entry-date{padding:12px 8px!important;white-space:normal!important;width:95px}}
+
+/* Keep the illustrated portrait visible above the introduction on phones. */
+@media(max-width:540px){.intro>tbody>tr{display:flex;flex-direction:column-reverse;align-items:center}.intro-copy{display:block;box-sizing:border-box;width:100%!important}.intro .photo-cell{display:block;box-sizing:border-box;width:180px!important;max-width:60%!important;padding:16px 8px 0!important}.intro .portrait{max-width:164px}}
