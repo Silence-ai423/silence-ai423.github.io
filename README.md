@@ -26,3 +26,11 @@ Website: https://silence-ai423.github.io/
 - OpenDepth: https://arxiv.org/abs/2610.17610
 
 Paper thumbnails are sourced from their respective papers. The OmniNavBench thumbnail uses the teaser (Figure 1) extracted from https://arxiv.org/pdf/2605.09441. Layout references: https://jonbarron.info/ and https://ericaire.github.io/.
+
+
+## Institution marks
+
+- Peking University: official seal from https://www.pku.edu.cn/pku_logo_red.png
+- BUPT: official identity header from https://vi.bupt.edu.cn/images/logo1.png; the seal is displayed using CSS framing, preserving the original asset.
+- AutoLab: official organization avatar from https://github.com/AutoLab-SAI-SJTU (https://avatars.githubusercontent.com/u/219082940?v=4).
+- VCL Lab: the logo from the user-selected reference https://chang-xinhai.github.io/images/experience/webp/VCL.webp.
